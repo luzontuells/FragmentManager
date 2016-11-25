@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
@@ -17,7 +18,7 @@ import android.view.ViewGroup;
  * Use the {@link SecondFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SecondFragment extends Fragment {
+public class SecondFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -64,7 +65,10 @@ public class SecondFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false);
+        View fragView = inflater.inflate(R.layout.fragment_second, container, false);
+        final Button upd1 = (Button) fragView.findViewById(R.id.firstFragmentButton);
+        upd1.setOnClickListener(this);
+        return fragView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -89,6 +93,11 @@ public class SecondFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 
     /**
