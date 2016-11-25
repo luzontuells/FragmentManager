@@ -4,24 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    
+
     <fragment
+        android:id="@+id/fragmentFirst"
+        android:name="com.example.a5alumno.fragmentmanager.FirstFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@+id/fragmentFirst"
-        android:name="com.example.a5alumno.fragmentmanager.FirstFragment"
         tools:layout="@layout/fragment_first" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@android:color/darker_gray"/>
+        android:background="@android:color/darker_gray" />
+
     <fragment
+        android:id="@+id/fragmentSecond"
+        android:name="com.example.a5alumno.fragmentmanager.SecondFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@+id/fragmentSecond"
-        android:name="com.example.a5alumno.fragmentmanager.SecondFragment"
         tools:layout="@layout/fragment_second" />
 
 </LinearLayout>
